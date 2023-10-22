@@ -1,0 +1,14 @@
+.row{
+    margin-top: 10px;
+ }
+
+.rating {
+unicode-bidi: bidi-override;
+direction: rtl;
+color: rgb(185, 176, 11);
+}
+.rating > span:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}

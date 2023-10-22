@@ -1,0 +1,96 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="start">Check in:</label>
+            <input type="date" id="start" name="trip-start"
+                value="2022-04-09"
+                min="2022-01-01" max="2030-12-31"> 
+        </div>    
+        <div class="col-md-4">
+        <label for="start">Check out:</label>
+        <input type="date" id="start" name="trip-start"
+                value="2022-04-12"
+                min="2022-01-01" max="2030-12-31">
+        </div>
+        
+        <div class="col-md-4" style="margin-top: 22px;">     
+            <div class="dropdown">
+                <button style="background-color:#E89C31;" type="button"class="btn dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bed" aria-hidden="true"></i> Rooms
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button type="button" class="list-group-item list-group-item-action">Family rooms</button>
+                    <button type="button" class="list-group-item list-group-item-action">Double rooms</button>
+                    <button type="button" class="list-group-item list-group-item-action">Single rooms</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">                
+            <div class="slider">
+                <input type="range" min="1" max="6000" oninput="mySlider()" class="custom-range" id="priceRange">
+                <p>Price : <span id="price"></span>&nbsp;<i class="fa fa-eur"></i></p>
+            </div>
+        </div>
+       
+        <div class="col-md-2">
+            <div class="btn-group">           
+            <button style="background-color: #E89C31;" type="button" class="btn"><i class="fa fa-star-o" aria-hidden="true"></i> Property</button>
+            <button style="background-color:#E89C31;" type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <ul  class="list-group">
+                    <li class="list-group-item">{{entries[1].entries[0].rating}} <i class="fa fa-star" aria-hidden="true"></i><br>{{entries[1].entries[0].hotelName}}</li>
+                    <li class="list-group-item">{{entries[1].entries[1].rating}} <i class="fa fa-star" aria-hidden="true"></i><br>{{entries[1].entries[1].hotelName}}</li> 
+                    <li class="list-group-item">{{entries[1].entries[2].rating}} <i class="fa fa-star" aria-hidden="true"></i><br>{{entries[1].entries[2].hotelName}}</li>                   
+                </ul>
+               
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="btn-group">
+            <button style="background-color: #E89C31;" type="button" class="btn ">Ratings</button>
+            <button style="background-color: #E89C31;"type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <ul class="list-group">
+                    <li class="list-group-item">{{entries[1].entries[0].ratings.no}}-{{entries[1].entries[0].hotelName}}</li>
+                    <li class="list-group-item">{{entries[1].entries[1].ratings.no}}-{{entries[1].entries[1].hotelName}}</li>
+                    <li class="list-group-item">{{entries[1].entries[2].ratings.no}}-{{entries[1].entries[2].hotelName}}</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="btn-group">
+            <button style="background-color: #E89C31;" type="button" class="btn"><i class="fa fa-location-arrow" aria-hidden="true"></i> Locations</button>
+            <button style="background-color: #E89C31;" type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <ul class="list-group">
+                    <li class="list-group-item">{{entries[1].entries[0].hotelName}}<br>{{entries[1].entries[0].city}}</li>
+                    <li class="list-group-item">{{entries[1].entries[1].hotelName}}<br>{{entries[1].entries[1].city}}</li> 
+                    <li class="list-group-item">{{entries[1].entries[2].hotelName}}<br>{{entries[1].entries[2].city}}</li>                   
+                </ul>
+            </div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
